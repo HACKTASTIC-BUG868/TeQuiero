@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "912000189164",
+    "firebase_url": "https://tequiero-79650.firebaseio.com",
+    "project_id": "tequiero-79650",
+    "storage_bucket": "tequiero-79650.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912000189164:android:b6d1d21ac11d3cb8",
+        "android_client_info": {
+          "package_name": "brogrammers.com.tequiero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912000189164-dm1tdkbbg3vlprsa6g8gjtmqcegcofbr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "brogrammers.com.tequiero",
+            "certificate_hash": "5340ced8b436dbdabab6c589e27a32092bb68121"
+          }
+        },
+        {
+          "client_id": "912000189164-mkj0h5n74dn8m21dlgvtplc120b4uaql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9o8xpOE7kUMkPvfebhcLMwAuvVpbdcf0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912000189164-mkj0h5n74dn8m21dlgvtplc120b4uaql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
