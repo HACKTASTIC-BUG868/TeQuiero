@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "522949550854",
+    "firebase_url": "https://tequiro-1c81e.firebaseio.com",
+    "project_id": "tequiro-1c81e",
+    "storage_bucket": "tequiro-1c81e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522949550854:android:6093cf961b5b6ff8",
+        "android_client_info": {
+          "package_name": "brogrammers.com.tequiero2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522949550854-bva7b1f33g8flrbq39m5obe7r2f98n9e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "brogrammers.com.tequiero2",
+            "certificate_hash": "5340ced8b436dbdabab6c589e27a32092bb68121"
+          }
+        },
+        {
+          "client_id": "522949550854-qagqg49vs0alisuav230t2dqvqqolq0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf2OQhWMriNHSqc0TFMDRO4zC6yPpM-Go"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522949550854-qagqg49vs0alisuav230t2dqvqqolq0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

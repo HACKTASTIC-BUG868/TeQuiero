@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:paddingBottom="10dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp"
-    android:background="@android:color/holo_green_light"
+    android:paddingBottom="@android:dimen/dialog_min_width_major"
+    android:paddingLeft="@android:dimen/dialog_min_width_major"
+    android:paddingRight="@android:dimen/dialog_min_width_major"
+    android:paddingTop="@android:dimen/dialog_min_width_major"
+    android:background="@color/light_purple"
     tools:context="MainChatActivity">
 
     <ListView
@@ -33,10 +33,10 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:hint="msg"
-            android:imeActionLabel="send"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:hint="@string/prompt_msg"
+            android:imeActionLabel="@string/action_send"
             android:imeOptions="actionUnspecified"
             android:inputType="textCapSentences|textAutoCorrect"
             android:maxLines="1"
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_send"
-            android:contentDescription="send"/>
+            android:contentDescription="@string/action_send"/>
     </LinearLayout>
 
 
