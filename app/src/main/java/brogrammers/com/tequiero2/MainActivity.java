@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         if(user != null) {
             Toast.makeText(MainActivity.this, user.getEmail(), Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+            startActivity(new Intent(MainActivity.this, ScrollingActivity.class));
         }
 
     }

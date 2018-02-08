@@ -1,13 +1,13 @@
 package brogrammers.com.tequiero2;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
@@ -15,10 +15,17 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        Button btnSignOut = findViewById(R.id.sign_out);
+        btnSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
+            }
+        });
     }
 
     public void onClick(View v) {
+        Log.e("debug","Signout button clicked");
         switch (v.getId()) {
             // ...
             case R.id.sign_out:
@@ -28,12 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
     private void signOut() {
-        mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        // ...
-                    }
-                });
+        FirebaseAuth.getInstance().signOut();
+        finish();
     }
 }

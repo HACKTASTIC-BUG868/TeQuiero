@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textStyle="bold"
+            android:text="THE CHOICES YOU MAKE WILL REFLECT UPON THE PARTNER WE FIND FOR YOU SO MAKE YOUR CHOICES WISELY!" />
+
+        <TextView
+            android:id="@+id/InstructionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textStyle="bold"
+            android:text="  SOMETHINGS YOU NEED TO KNOW:" />
+        // do not change following paragraphs , they are already formatted and adjusted somehow to look good
+        <TextView
+            android:id="@+id/Instruction1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="
+1. ALL THE CHOICES ARE OF YES OR NO
+ TYPES, NON SELECTION OF ANY CHOICE
+ WOULD AUTOMATICALLY MEAN A NEGATIVE
+ ANSWER TO THAT CHOICE.
+" />
+        <TextView
+            android:id="@+id/Instruction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="
+2. CHOICES ARE WEIGHTED IN NATURE, PRIMARY
+    CHOICES HAS THE MAXIMUM WEIGHTAGE
+    FOLLOWED BY SECONDARY CHOICES AND SO ON.
+" />
+        <TextView
+            android:id="@+id/Instruction3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="
+3. BASED ON YOUR CHOICES MADE WE TRY TO FIND
+  PROFILES WITH MAXIMUM MATCHING PERCENTAGE
+  WITH YOUR CHOICES.
+" />
+        <TextView
+            android:id="@+id/Instruction4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="
+4. ALL PROFILES WITH MATCHING PERCENTAGE
+    GREATER THAN OR EQUAL TO 40 % WILL BE
+    SHOWN TO YOU.
+" />
+
+        <EditText
+            android:id="@+id/nametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name" />
+        <EditText
+            android:id="@+id/emailtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email" />
+        <EditText
+            android:id="@+id/UID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a unique profile name for yourself" />
+        <TextView
+            android:id="@+id/Header2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRIMARY CHOICES:"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE3" />
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE4" />
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE5" />
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE6" />
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE7" />
+        <CheckBox
+            android:id="@+id/checkBox8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE8" />
+        <CheckBox
+            android:id="@+id/checkBox9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE9" />
+        <CheckBox
+            android:id="@+id/checkBox10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE10" />
+        <TextView
+            android:id="@+id/Header3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SECONDARY CHOICES :"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+        <CheckBox
+            android:id="@+id/checkBox11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE1" />
+
+        <CheckBox
+            android:id="@+id/checkBox12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE2" />
+        <CheckBox
+            android:id="@+id/checkBox13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE3" />
+        <CheckBox
+            android:id="@+id/checkBox14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE4" />
+        <CheckBox
+            android:id="@+id/checkBox15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE5" />
+        <CheckBox
+            android:id="@+id/checkBox16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE6" />
+        <CheckBox
+            android:id="@+id/checkBox17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE7" />
+        <CheckBox
+            android:id="@+id/checkBox18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE8" />
+        <CheckBox
+            android:id="@+id/checkBox19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE9" />
+        <CheckBox
+            android:id="@+id/checkBox20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE10" />
+        <TextView
+            android:id="@+id/Header4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ICING ON THE CAKE:"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+        <CheckBox
+            android:id="@+id/checkBox21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE1" />
+
+        <CheckBox
+            android:id="@+id/checkBox22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE2" />
+        <CheckBox
+            android:id="@+id/checkBox23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE3" />
+        <CheckBox
+            android:id="@+id/checkBox24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE4" />
+        <CheckBox
+            android:id="@+id/checkBox25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOICE5" />
+        <Button
+            android:id="@+id/Submit"
+            android:text="SUBMIT CHOICES AND FIND MY MATCH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
