@@ -9,7 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -17,15 +18,18 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Arrays;
 
 
-public class ScrollingActivity extends AppCompatActivity  {
+public class ScrollingActivity extends AppCompatActivity {
     Button Submit ;
-    CheckBox c[] = new CheckBox[25];
+    CheckBox c[] = new CheckBox[14];
     private DatabaseReference mDataBase;
     //  private DatabaseReference mDatabaseget;
     private EditText nametext;
     private EditText emailtext;
-    private EditText profile;
-    TextView data;
+    private RadioButton malebutton;
+    private RadioButton femalebutton;
+
+
+    //TextView data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,21 +53,7 @@ public class ScrollingActivity extends AppCompatActivity  {
         c[10] = (CheckBox)findViewById(R.id.checkBox11);
         c[11] = (CheckBox)findViewById(R.id.checkBox12);
         c[12] = (CheckBox)findViewById(R.id.checkBox13);
-        c[13] = (CheckBox)findViewById(R.id.checkBox14);
-        c[14] = (CheckBox)findViewById(R.id.checkBox15);
-        c[15] = (CheckBox)findViewById(R.id.checkBox16);
-        c[16] = (CheckBox)findViewById(R.id.checkBox17);
-        c[17] = (CheckBox)findViewById(R.id.checkBox18);
-        c[18] = (CheckBox)findViewById(R.id.checkBox19);
-        c[19] = (CheckBox)findViewById(R.id.checkBox20);
-        c[20] = (CheckBox)findViewById(R.id.checkBox21);
-        c[21] = (CheckBox)findViewById(R.id.checkBox22);
-        c[22] = (CheckBox)findViewById(R.id.checkBox23);
-        c[23] = (CheckBox)findViewById(R.id.checkBox24);
-        c[24] = (CheckBox)findViewById(R.id.checkBox25);
-        nametext = (EditText)findViewById(R.id.nametext);
-        emailtext = (EditText)findViewById(R.id.emailtext);
-        profile = (EditText)findViewById(R.id.UID);
+
         Submit = (Button)findViewById(R.id.Submit);
 
         Submit.setOnClickListener(new View.OnClickListener() {
@@ -72,52 +62,24 @@ public class ScrollingActivity extends AppCompatActivity  {
                 //   HashMap<String, Object>datamap = new HashMap<String ,Object>();
 
                 int i = 0;
-                int match[] = new int[25];
-                for(i=0;i<25;i++){
+                int match[] = new int[14];
+                for(i=0;i<13;i++){
                     if(c[i].isChecked()){
                         match[i]=1;
-                        c[i].setChecked(false);
                     }
                     else{
                         match[i] = 0 ;
                     }
                 }
                 final  String matchingmapasbits = Arrays.toString(match);
-                final   String UniqueName = profile.getText().toString().trim();
-                // Code to check if Unique Id is already present in firebase , Executing but not getting desired output , hence commented
-        /*     mDataBase.addListenerForSingleValueEvent(new ValueEventListener() {
-                  @Override
-                  public void onDataChange(DataSnapshot dataSnapshot) {
-                      if(dataSnapshot.hasChild(UniqueName)){
-                          // IT EXSISTS
-                          Toast.makeText(ScrollingActivity.this, "The Unique profile name you have added already exsists " +
-                                  ", Please give another name ", Toast.LENGTH_LONG).show();
-                          profile.setText("");
-                      }
-                      else{
-                          //IT DOESNT EXISTS
-                          addData(matchingmapasbits);
-                          nametext.setText("");
-                          emailtext.setText("");
-                          profile.setText("");
-                      }
-                  }
-
-                  @Override
-                  public void onCancelled(DatabaseError databaseError) {
-
-                  }
-              });*/
-                addData(matchingmapasbits);
-                nametext.setText("");
-                emailtext.setText("");
-                profile.setText("");
-             /* datamap.put("Name",name);
-              datamap.put("E-MAIl",emaili);
-              datamap.put("logic",matchingmapasbits);
-              mDataBase.push().setValue(datamap);*/
+                //addData(matchingmapasbits);
+//                nametext.setText("");
+//                emailtext.setText("");
+                interestPush(c);
+                Toast.makeText(ScrollingActivity.this, "Should work fine", Toast.LENGTH_SHORT).show();
 
 
+// showProfile() ; // uncomment when searching code done
                 // pass the match[] to  firebase and then find the matching percentage
             }
         });
@@ -129,11 +91,30 @@ public class ScrollingActivity extends AppCompatActivity  {
 
     }
     public void addData(final String s){
-        String UniqueName = profile.getText().toString().trim();
+        String Sex;
+        if(malebutton.isChecked()){
+            Sex = "Male";
+            malebutton.setChecked(false);
+        }
+        else{
+            Sex = "Female";
+            femalebutton.setChecked(false);
+        }
         final String name = nametext.getText().toString().trim();
-        final String emaili = emailtext.getText().toString().trim();
-        user usertoset = new user(name,emaili,s);
-        mDataBase.child("user").child(UniqueName).setValue(usertoset);
+        String emaili = emailtext.getText().toString().trim();
+       // User usertoset = new User(name,emaili,s,Sex);
+      //  mDataBase.child("User").child(emaili).setValue(usertoset);
+    }
+    public void interestPush(CheckBox inp[]){
+        for(int i =0 ; i<13 ; i++){
+
+                Helper.log(inp[i].getText().toString());
+                Helper.log(Fbase.getDatabaseRef()
+                        .child("interests")
+                        .child("random")
+                        .push().getKey());
+
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
